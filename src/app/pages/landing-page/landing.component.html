@@ -1,0 +1,18 @@
+<app-introduction-sction id="introduction" [smallTitle]="'هو مظلة قطاع الأعمال السعودي بمختلف قطاعاته وفئاته ومناطقه'"
+    [bigTitle]="'اتحاد الغرف السعودية'"></app-introduction-sction>
+<app-blogs id="blogs" [smallTitle]="'الأخبار'" [bigTitle]="'تغطية الفعاليات'" [blogs]="allData?.blogs"></app-blogs>
+
+<app-about id="about" [title]="'من نحن'"
+    [heading]="'اتحاد الغرف السعودية هو مظلة قطاع الأعمال السعودي بمختلف قطاعاته وفئاته ومناطقه'" [content]="'في حين تمثل الغرف التجارية مصالح قطاع الأعمال في المناطق والمدن والمحافظات التي توجد بها
+تقديم خــدمات مـــوثوقة ذات جودة ومهــنية عــالـيـة في رصد وحفظ وإدارة وتــنمية أمــوال المـسـتفـيدين وإشــــراف فـعّـــال على التـــصــرفـات الـمــالــيـة للأولــيـــاء والأوصياء والقيمين ، من خلال بناء مؤسسي متميز وبيئة عمل محفزة وكفاءات بشرية مؤهلة وأنـظـمـة تقنية متطورة.
+'" [imageUrl]="'./assets/img/bg3.jpeg'">
+</app-about>
+
+<app-blogs id="feastivities" [numVisible]="4" [numScroll]="4" [circular]="false" [smallTitle]="'الفعاليات'"
+    [bigTitle]="'تغطية الفعاليات'" [blogs]="allData?.feastivities"></app-blogs>
+<app-partners [smallTitle]="'شاركنا '" id="partners" [bigTitle]="' شركاء النجاح'"
+    [partners]="allData?.partners"></app-partners>
+<app-map id="map" [mapUrl]="
+    'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d58008.39961730319!2d46.690536!3d24.674474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03600f9ddfdb%3A0x3c09e8bc8a683aa6!2sFederation%20of%20Saudi%20Chambers!5e0!3m2!1sen!2sus!4v1725112852456!5m2!1sen!2sus'
+  " [width]="'100%'" [height]="'400px'">
+</app-map>

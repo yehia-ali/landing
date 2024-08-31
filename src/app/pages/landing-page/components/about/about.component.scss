@@ -1,0 +1,15 @@
+.about {
+    .text {
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 4px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--bs-primary);
+        }
+    }
+}

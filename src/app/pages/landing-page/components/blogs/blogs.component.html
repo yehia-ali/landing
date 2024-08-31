@@ -1,0 +1,44 @@
+<!-- Blog Start -->
+<div class="container-fluid blog pb-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h4 class="text-primary">{{smallTitle}} </h4>
+            <h1 class="display-4">{{bigTitle}}</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <p-carousel
+            [value]="blogs"
+            [numVisible]="numVisible"
+            [numScroll]="numScroll"
+            [circular]="circular"
+            [responsiveOptions]="responsiveOptions"
+            autoplayInterval="3000">
+          
+            <ng-template pTemplate="item" let-blog>
+              <div class="col-md-12 col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="blog-item bg-light rounded p-4" style="background-image: url(./assets/img/bg.png);">
+                    @if(blog.Date) {
+                  <div class="mb-4">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-0"><span class="text-dark fw-bold">On</span> {{ blog.Date }}</p>
+                          </div>
+                        </div>
+                    }
+
+                  <div class="project-img">
+                    <img [src]="blog.ImageDTO.Value" class="img-fluid w-100 rounded" alt="Image">
+                  </div>
+                  <div class="my-4">
+                    <a [href]="'#'" class="h4">{{ blog.Title }}</a>
+                  </div>
+                  <a class="btn btn-primary rounded-pill py-2 px-4" href="#">تفاصيل الخبر</a>
+                </div>
+              </div>
+            </ng-template>
+          
+          </p-carousel>
+          
+        </div>
+    </div>
+</div>
+<!-- Blog End -->

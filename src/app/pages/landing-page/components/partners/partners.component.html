@@ -1,0 +1,20 @@
+<!-- partners Section -->
+<section id="partners" class="partners section bg-light">
+
+    <div class="container py-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+            <h4 class="text-primary">{{smallTitle}} </h4>
+            <h1 class="display-4">{{bigTitle}}</h1>
+        </div>
+        <div class="row g-0 partners-wrap">
+            @for (partner of partners | slice:0:8; track partner.Id ) {
+            <div class="col-xl-3 col-md-4 partners-logo">
+                <img [src]="partner.ImageDTO.Value" class="img-fluid" [alt]="partner.PartnershipName">
+            </div><!-- End partners Item -->
+
+            }
+        </div>
+
+    </div>
+
+</section><!-- /partners Section -->
