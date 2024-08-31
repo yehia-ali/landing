@@ -1,6 +1,21 @@
 body {
     direction: rtl;
+
 }
+* {
+    font-family: "Beiruti", sans-serif !important;
+}
+
+/* Override font-family for Font Awesome icons */
+.fas, .far, .fal, .fab, .fa {
+    font-family: "FontAwesome" !important;
+}
+
+/* Alternatively, if you're using Font Awesome 5 or above, you might need this */
+.fa, .fas, .far, .fal, .fab, .fa-solid, .fa-regular, .fa-light, .fa-brands {
+    font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome" !important;
+}
+
 .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
     background: #08885e !important;
 

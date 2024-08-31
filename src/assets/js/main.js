@@ -17,21 +17,39 @@
 
 
     // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(window).width() > 992) {
-            if ($(this).scrollTop() > 45) {
-                $('.topbar').addClass('d-lg-none');
-                $('.sticky-top .container').addClass('shadow-sm').css('max-width', '100%');
+    $(function() {
+        const $window = $(window);
+        const $container = $('.sticky-top .container');
+        const $navbarNav = $container.find('.navbar-nav');
+        const $navbarBrand = $container.find('.navbar-brand');
+        const $topbar = $('.topbar');
+    
+        function handleScroll() {
+            if ($window.width() > 992) {
+                const scrollTop = $window.scrollTop();
+                if (scrollTop > 45) {
+                    $topbar.addClass('d-lg-none');
+                    $container.addClass('bg-white shadow-sm').css('max-width', '100%');
+                    $navbarNav.addClass('ms-auto').removeClass('mx-auto');
+                    $navbarBrand.addClass('d-block').removeClass('d-none');
+                } else {
+                    $topbar.removeClass('d-lg-none');
+                    $container.removeClass('bg-white shadow-sm').css('max-width', '80%');
+                    $navbarNav.removeClass('ms-auto').addClass('mx-auto');
+                    $navbarBrand.removeClass('d-block').addClass('d-none');
+                }
             } else {
-                $('.sticky-top .container').removeClass('shadow-sm').css('max-width', '80%');
-                $('.topbar').removeClass('d-lg-none');
+                $container.addClass('shadow-sm').css('max-width', '100%');
             }
-        } else {
-            $('.sticky-top .container').addClass('shadow-sm').css('max-width', '100%');
         }
+    
+        // Initial call to set up the right state
+        handleScroll();
+    
+        // Attach scroll event handler
+        $window.scroll(handleScroll);
     });
-
-
+    
 
 
 

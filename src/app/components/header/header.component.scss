@@ -16,14 +16,12 @@ header {
 .topbar {
 	padding: 2px 10px 2px 20px;
 }
-.sticky-top {
-	transition: 0.5s !important;
-	.container {
-		transition: 0.5s !important;
-	}
+.bg-white {
 	.navbar {
 		.navbar-nav {
 			.nav-link {
+				color: $color_1 !important;
+
 				&:hover {
 					color: $color_2 !important;
 				}
@@ -34,17 +32,16 @@ header {
 		}
 	}
 }
+.sticky-top {
+	transition: 0.5s !important;
+	.container {
+		transition: 0.5s !important;
+	}
+
+}
 .navbar {
 	.navbar-nav {
-		.nav-item.nav-link {
-			color: $color_1 !important;
-		}
-		.nav-link {
-			color: $color_1 !important;
-			&:hover {
-				color: $color_2 !important;
-			}
-		}
+	
 		.nav-item {
 			position: relative;
 			margin: 0 5px !important;
